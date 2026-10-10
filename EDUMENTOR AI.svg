@@ -1,0 +1,329 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 500" width="100%" height="100%" style="background:#070510; font-family:-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="bg-glow-right" cx="80%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#ec4899" stop-opacity="0.25"/>
+      <stop offset="40%" stop-color="#7c3aed" stop-opacity="0.2"/>
+      <stop offset="80%" stop-color="#3b82f6" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#070510" stop-opacity="1"/>
+    </radialGradient>
+    
+    <radialGradient id="bg-glow-left" cx="15%" cy="60%" r="50%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.18"/>
+      <stop offset="50%" stop-color="#7c3aed" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#070510" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Text & Surface Gradients -->
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#f472b6"/>
+      <stop offset="70%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+
+    <linearGradient id="primary-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899"/>
+      <stop offset="50%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+
+    <linearGradient id="glass-card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <linearGradient id="glass-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f472b6" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.4"/>
+    </linearGradient>
+
+    <linearGradient id="badge-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0.3"/>
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glow-heavy" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="glow-subtle" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+
+    <!-- Tech Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- 1. BACKGROUND -->
+  <rect width="1600" height="500" fill="#070510"/>
+  <rect width="1600" height="500" fill="url(#grid)"/>
+  <rect width="1600" height="500" fill="url(#bg-glow-right)"/>
+  <rect width="1600" height="500" fill="url(#bg-glow-left)"/>
+
+  <!-- 2. BACKGROUND NEURAL NETWORK & TECH NODES -->
+  <g opacity="0.3">
+    <!-- Synapse Lines -->
+    <path d="M 780 120 L 920 80 L 1100 140 L 1350 70 L 1500 180 L 1380 320 L 1150 280 L 980 380 L 820 260 Z" fill="none" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <path d="M 920 80 L 1150 280 L 1350 70 M 1100 140 L 1380 320 L 980 380" fill="none" stroke="#3b82f6" stroke-width="1"/>
+    
+    <!-- Glowing Brain Neural Circuit Overlay (Top Right Abstract) -->
+    <path d="M 1250 150 C 1220 120, 1180 140, 1160 170 C 1140 200, 1150 240, 1180 260 C 1210 280, 1250 270, 1280 240 C 1310 210, 1300 170, 1250 150 Z" fill="none" stroke="#ec4899" stroke-width="2" stroke-dasharray="6 6" filter="url(#glow-subtle)"/>
+
+    <!-- Nodes -->
+    <circle cx="920" cy="80" r="5" fill="#ec4899" filter="url(#glow-subtle)"/>
+    <circle cx="1100" cy="140" r="6" fill="#3b82f6" filter="url(#glow-subtle)"/>
+    <circle cx="1350" cy="70" r="7" fill="#c084fc" filter="url(#glow-heavy)"/>
+    <circle cx="1500" cy="180" r="4" fill="#38bdf8" filter="url(#glow-subtle)"/>
+    <circle cx="1380" cy="320" r="6" fill="#ec4899" filter="url(#glow-subtle)"/>
+    <circle cx="1150" cy="280" r="8" fill="#7c3aed" filter="url(#glow-heavy)"/>
+    <circle cx="980" cy="380" r="5" fill="#3b82f6" filter="url(#glow-subtle)"/>
+  </g>
+
+  <!-- Floating Glowing Particles -->
+  <g opacity="0.6">
+    <circle cx="180" cy="70" r="2" fill="#ec4899"/>
+    <circle cx="680" cy="430" r="3" fill="#60a5fa" filter="url(#glow-subtle)"/>
+    <circle cx="850" cy="70" r="2.5" fill="#c084fc"/>
+    <circle cx="1520" cy="390" r="3" fill="#ec4899" filter="url(#glow-subtle)"/>
+  </g>
+
+  <!-- 3. BRANDING & TYPOGRAPHY (LEFT SIDE) -->
+
+  <!-- Top Pill Badge -->
+  <g transform="translate(90, 80)">
+    <rect x="0" y="0" width="280" height="34" rx="17" fill="url(#badge-grad)" stroke="url(#glass-border)" stroke-width="1"/>
+    <circle cx="18" cy="17" r="4" fill="#ec4899" filter="url(#glow-subtle)"/>
+    <text x="32" y="22" font-size="12" font-weight="700" fill="#f472b6" letter-spacing="1.2">NEXT-GEN EDTECH PLATFORM</text>
+  </g>
+
+  <!-- Main Title: 🎓 EduMentor AI -->
+  <g transform="translate(86, 175)">
+    <!-- Graduation Cap Emoji Graphic -->
+    <g transform="translate(0, -52)">
+      <!-- Custom High-Tech Graduation Cap SVG -->
+      <path d="M 0 24 L 32 8 L 64 24 L 32 40 Z" fill="url(#primary-grad)" filter="url(#glow-subtle)"/>
+      <path d="M 14 33 L 14 50 C 14 57 50 57 50 50 L 50 33" fill="none" stroke="#ffffff" stroke-opacity="0.9" stroke-width="2.5"/>
+      <path d="M 54 28 L 62 48 L 58 48" fill="none" stroke="#ec4899" stroke-width="2.5"/>
+      <circle cx="58" cy="50" r="2.5" fill="#ec4899" filter="url(#glow-subtle)"/>
+    </g>
+    <!-- Title Text -->
+    <text x="80" y="0" font-size="64" font-weight="900" fill="url(#title-grad)" letter-spacing="-1.5" filter="url(#glow-subtle)">EduMentor AI</text>
+  </g>
+
+  <!-- Subtitle -->
+  <g transform="translate(90, 222)">
+    <text x="0" y="0" font-size="22" font-weight="600" fill="#f1f5f9" letter-spacing="0.2">
+      AI-Powered Personalized Learning Platform
+    </text>
+  </g>
+
+  <!-- Bottom Tagline -->
+  <g transform="translate(90, 262)">
+    <text x="0" y="0" font-size="14" font-weight="500" fill="#94a3b8" letter-spacing="0.3">
+      Learn Smarter  •  Summarize Faster  •  Practice Better  •  Grow with AI
+    </text>
+  </g>
+
+  <!-- Feature Cards / Badges Row -->
+  <g transform="translate(90, 310)">
+    <!-- Feature 1: PDF Summarizer -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="145" height="42" rx="12" fill="url(#glass-card)" stroke="url(#glass-border)" stroke-width="1"/>
+      <path d="M 18 16 L 26 16 L 30 20 L 30 30 L 18 30 Z" fill="none" stroke="#ec4899" stroke-width="1.8"/>
+      <line x1="21" y1="23" x2="27" y2="23" stroke="#ec4899" stroke-width="1.5"/>
+      <line x1="21" y1="26" x2="25" y2="26" stroke="#ec4899" stroke-width="1.5"/>
+      <text x="38" y="26" font-size="12" font-weight="600" fill="#e2e8f0">PDF Summaries</text>
+    </g>
+
+    <!-- Feature 2: Quiz & MCQ -->
+    <g transform="translate(157, 0)">
+      <rect x="0" y="0" width="140" height="42" rx="12" fill="url(#glass-card)" stroke="url(#glass-border)" stroke-width="1"/>
+      <rect x="18" y="16" width="12" height="12" rx="3" fill="none" stroke="#60a5fa" stroke-width="1.8"/>
+      <path d="M 21 22 L 23 24 L 28 18" fill="none" stroke="#60a5fa" stroke-width="1.8"/>
+      <text x="38" y="26" font-size="12" font-weight="600" fill="#e2e8f0">Adaptive Quizzes</text>
+    </g>
+
+    <!-- Feature 3: Smart Planner -->
+    <g transform="translate(309, 0)">
+      <rect x="0" y="0" width="135" height="42" rx="12" fill="url(#glass-card)" stroke="url(#glass-border)" stroke-width="1"/>
+      <rect x="18" y="16" width="13" height="13" rx="3" fill="none" stroke="#c084fc" stroke-width="1.8"/>
+      <line x1="18" y1="20" x2="31" y2="20" stroke="#c084fc" stroke-width="1.5"/>
+      <text x="38" y="26" font-size="12" font-weight="600" fill="#e2e8f0">Smart Planner</text>
+    </g>
+
+    <!-- Feature 4: AI Tutor -->
+    <g transform="translate(456, 0)">
+      <rect x="0" y="0" width="125" height="42" rx="12" fill="url(#glass-card)" stroke="url(#glass-border)" stroke-width="1"/>
+      <circle cx="24" cy="22" r="6" fill="none" stroke="#38bdf8" stroke-width="1.8"/>
+      <path d="M21 22h6 M24 19v6" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="38" y="26" font-size="12" font-weight="600" fill="#e2e8f0">24/7 AI Tutor</text>
+    </g>
+  </g>
+
+  <!-- Metrics Bar (Bottom Left) -->
+  <g transform="translate(90, 395)">
+    <line x1="0" y1="0" x2="580" y2="0" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1"/>
+    
+    <g transform="translate(0, 20)">
+      <text x="0" y="16" font-size="20" font-weight="800" fill="#f472b6">10x</text>
+      <text x="45" y="14" font-size="11" font-weight="500" fill="#64748b">Faster Learning<br/>Retention</text>
+    </g>
+    
+    <g transform="translate(160, 20)">
+      <text x="0" y="16" font-size="20" font-weight="800" fill="#60a5fa">100%</text>
+      <text x="58" y="14" font-size="11" font-weight="500" fill="#64748b">Personalized<br/>Curriculum</text>
+    </g>
+
+    <g transform="translate(320, 20)">
+      <text x="0" y="16" font-size="20" font-weight="800" fill="#c084fc">Real-time</text>
+      <text x="85" y="14" font-size="11" font-weight="500" fill="#64748b">Analytics &amp;<br/>Insights</text>
+    </g>
+  </g>
+
+
+  <!-- 4. FLOATING UI DASHBOARD MOCKUPS & GRAPHICS (RIGHT SIDE) -->
+
+  <!-- Main Central Container -->
+  <g transform="translate(770, 45)" filter="url(#shadow)">
+    
+    <!-- MAIN DASHBOARD WINDOW -->
+    <g>
+      <rect x="80" y="30" width="620" height="370" rx="20" fill="url(#glass-card)" stroke="url(#glass-border)" stroke-width="1.5" filter="url(#glow-heavy)"/>
+      <rect x="81" y="31" width="618" height="368" rx="19" fill="#0b071e" fill-opacity="0.85"/>
+
+      <!-- Window Header Bar -->
+      <rect x="81" y="31" width="618" height="40" rx="19" fill="#ffffff" fill-opacity="0.03"/>
+      <circle cx="106" cy="51" r="5" fill="#ef4444" fill-opacity="0.8"/>
+      <circle cx="122" cy="51" r="5" fill="#f59e0b" fill-opacity="0.8"/>
+      <circle cx="138" cy="51" r="5" fill="#10b981" fill-opacity="0.8"/>
+      <!-- Search bar inside mockup -->
+      <rect x="260" y="41" width="260" height="20" rx="6" fill="#ffffff" fill-opacity="0.05"/>
+      <text x="315" y="55" font-size="10" fill="#64748b" font-weight="500">✨ search course, pdf, or ask AI...</text>
+
+      <!-- CARD 1: Analytics & Mastery Growth Chart (Inside Dashboard) -->
+      <g transform="translate(105, 90)">
+        <rect x="0" y="0" width="320" height="150" rx="14" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.08"/>
+        <text x="16" y="24" font-size="13" font-weight="700" fill="#f8fafc">Subject Mastery Performance</text>
+        <text x="245" y="24" font-size="11" font-weight="700" fill="#34d399">+34% this week</text>
+        
+        <!-- Smooth Area Chart -->
+        <path d="M 16 115 Q 70 95 110 102 T 210 60 T 304 45 L 304 125 L 16 125 Z" fill="url(#primary-grad)" fill-opacity="0.2"/>
+        <path d="M 16 115 Q 70 95 110 102 T 210 60 T 304 45" fill="none" stroke="url(#primary-grad)" stroke-width="3" filter="url(#glow-subtle)"/>
+        
+        <!-- Glowing Chart Dots -->
+        <circle cx="210" cy="60" r="4" fill="#ec4899"/>
+        <circle cx="304" cy="45" r="5" fill="#38bdf8" filter="url(#glow-heavy)"/>
+      </g>
+
+      <!-- CARD 2: Quiz & Active Recall Card (Top Right) -->
+      <g transform="translate(440, 90)">
+        <rect x="0" y="0" width="235" height="150" rx="14" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.08"/>
+        <text x="16" y="24" font-size="12" font-weight="700" fill="#c084fc">⚡ Quick AI Quiz</text>
+        <text x="16" y="44" font-size="11" font-weight="500" fill="#e2e8f0">What is the function of Neural Nets?</text>
+        
+        <!-- Option A (Selected) -->
+        <rect x="16" y="58" width="203" height="28" rx="6" fill="#7c3aed" fill-opacity="0.3" stroke="#a855f7" stroke-width="1"/>
+        <circle cx="28" cy="72" r="5" fill="#ec4899"/>
+        <text x="40" y="76" font-size="10" font-weight="600" fill="#ffffff">A. Pattern Recognition</text>
+        
+        <!-- Option B -->
+        <rect x="16" y="92" width="203" height="28" rx="6" fill="#ffffff" fill-opacity="0.03"/>
+        <circle cx="28" cy="106" r="5" fill="#334155"/>
+        <text x="40" y="110" font-size="10" font-weight="500" fill="#94a3b8">B. Static Data Storage</text>
+      </g>
+
+      <!-- CARD 3: Study Planner Calendar Widget (Bottom Left) -->
+      <g transform="translate(105, 252)">
+        <rect x="0" y="0" width="270" height="120" rx="14" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.08"/>
+        <text x="16" y="24" font-size="12" font-weight="700" fill="#f8fafc">📅 Study Schedule</text>
+        
+        <!-- Schedule Items -->
+        <g transform="translate(16, 36)">
+          <rect x="0" y="0" width="238" height="30" rx="6" fill="#ffffff" fill-opacity="0.04"/>
+          <rect x="0" y="0" width="4" height="30" rx="2" fill="#38bdf8"/>
+          <text x="12" y="19" font-size="11" font-weight="600" fill="#e2e8f0">Quantum Mechanics PDF</text>
+          <text x="180" y="19" font-size="10" fill="#38bdf8" font-weight="600">10:00 AM</text>
+        </g>
+
+        <g transform="translate(16, 72)">
+          <rect x="0" y="0" width="238" height="30" rx="6" fill="#ffffff" fill-opacity="0.04"/>
+          <rect x="0" y="0" width="4" height="30" rx="2" fill="#ec4899"/>
+          <text x="12" y="19" font-size="11" font-weight="600" fill="#e2e8f0">AI Linear Algebra Quiz</text>
+          <text x="185" y="19" font-size="10" fill="#ec4899" font-weight="600">02:30 PM</text>
+        </g>
+      </g>
+
+      <!-- CARD 4: Student Avatar & Live AI Chat (Bottom Right) -->
+      <g transform="translate(390, 252)">
+        <rect x="0" y="0" width="285" height="120" rx="14" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.08"/>
+        
+        <!-- Student Studying Graphic / Avatar Icon -->
+        <g transform="translate(16, 16)">
+          <!-- Laptop Illustration Icon -->
+          <rect x="0" y="10" width="36" height="22" rx="3" fill="#1e1b4b" stroke="#60a5fa" stroke-width="1.5"/>
+          <path d="M -4 32 L 40 32 L 36 36 L 0 36 Z" fill="#60a5fa"/>
+          <!-- Student Avatar Circle -->
+          <circle cx="18" cy="0" r="8" fill="#f472b6"/>
+        </g>
+
+        <!-- Chat Bubble -->
+        <g transform="translate(68, 16)">
+          <rect x="0" y="0" width="200" height="42" rx="10" fill="#7c3aed" fill-opacity="0.25" stroke="#8b5cf6" stroke-opacity="0.4"/>
+          <text x="12" y="18" font-size="10" font-weight="600" fill="#38bdf8">🤖 EduMentor Bot</text>
+          <text x="12" y="32" font-size="10" fill="#e2e8f0">Summary ready! Want 5 MCQs?</text>
+        </g>
+
+        <g transform="translate(68, 64)">
+          <rect x="50" y="0" width="150" height="32" rx="10" fill="#3b82f6" fill-opacity="0.25" stroke="#60a5fa" stroke-opacity="0.4"/>
+          <text x="62" y="20" font-size="10" font-weight="500" fill="#ffffff">Yes, test my knowledge!</text>
+        </g>
+      </g>
+
+    </g>
+  </g>
+
+  <!-- 5. FLOATING 3D-LIKE EDTECH ACCENTS -->
+
+  <!-- Floating PDF Document Badge (Top Right Overlap) -->
+  <g transform="translate(1420, 20) rotate(8)" filter="url(#glow-heavy)">
+    <rect x="0" y="0" width="110" height="135" rx="12" fill="#0f172a" fill-opacity="0.9" stroke="#ec4899" stroke-width="2"/>
+    <!-- PDF Header Red/Pink -->
+    <rect x="12" y="12" width="36" height="18" rx="4" fill="#ec4899"/>
+    <text x="18" y="25" font-size="10" font-weight="900" fill="#ffffff">PDF</text>
+    <!-- Document Lines -->
+    <line x1="12" y1="42" x2="98" y2="42" stroke="#475569" stroke-width="3" stroke-linecap="round"/>
+    <line x1="12" y1="54" x2="80" y2="54" stroke="#475569" stroke-width="3" stroke-linecap="round"/>
+    <line x1="12" y1="66" x2="90" y2="66" stroke="#475569" stroke-width="3" stroke-linecap="round"/>
+    <!-- AI Sparkle Tag -->
+    <rect x="12" y="85" width="86" height="30" rx="6" fill="url(#primary-grad)"/>
+    <text x="22" y="104" font-size="11" font-weight="800" fill="#ffffff">✨ Summarized</text>
+  </g>
+
+  <!-- Floating Open Book Icon (Bottom Right Decor) -->
+  <g transform="translate(730, 350) rotate(-12)" filter="url(#glow-subtle)">
+    <rect x="0" y="0" width="90" height="70" rx="10" fill="#1e1b4b" stroke="#3b82f6" stroke-width="2"/>
+    <!-- Open Book Pages -->
+    <path d="M 15 20 C 30 15, 45 22, 45 55 C 30 48, 15 50, 15 20 Z" fill="#3b82f6" fill-opacity="0.3" stroke="#60a5fa" stroke-width="1.5"/>
+    <path d="M 75 20 C 60 15, 45 22, 45 55 C 60 48, 75 50, 75 20 Z" fill="#7c3aed" fill-opacity="0.3" stroke="#c084fc" stroke-width="1.5"/>
+  </g>
+
+  <!-- Floating AI Brain / Sparkle Elements -->
+  <g filter="url(#glow-heavy)">
+    <!-- Main Sparkle 1 -->
+    <path d="M 730 80 Q 730 60 750 60 Q 730 60 730 40 Q 730 60 710 60 Q 730 60 730 80 Z" fill="#f472b6"/>
+    <!-- Main Sparkle 2 -->
+    <path d="M 1490 320 Q 1490 305 1505 305 Q 1490 305 1490 290 Q 1490 305 1475 305 Q 1490 305 1490 320 Z" fill="#38bdf8"/>
+  </g>
+
+</svg>
