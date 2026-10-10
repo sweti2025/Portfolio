@@ -310,7 +310,7 @@
             <div class="md:w-1/2 flex justify-center">
                 <div class="relative">
                     <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-purple-300 to-purple-500 dark:from-purple-600 dark:to-purple-800 overflow-hidden border-4 border-white dark:border-slate-700 shadow-2xl">
-                        <img src="me.jpg" alt="Sweti Yadav Portrait" class="w-full h-full object-cover">
+                        <img src="Sweti.jpeg" alt="Sweti Yadav Portrait" class="w-full h-full object-cover">
                     </div>
                     <div class="absolute -bottom-5 -right-5 bg-white dark:bg-slate-700 rounded-full p-3 shadow-lg">
                         <div class="bg-gradient-to-r from-purple-500 to-purple-700 dark:from-purple-600 dark:to-purple-800 text-white rounded-full p-2">
@@ -640,14 +640,36 @@
                     const projectCard = document.createElement('div');
                     projectCard.className = 'project-card bg-white dark:bg-slate-700 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col animate-in fade-in';
                     projectCard.style.animationDelay = `${index * 0.1}s`;
+                    const repoName = repo.name.toLowerCase().replace(/[^a-z0-9]/g, '');
+                    let bannerImage = '';
+                    let bannerAlt = '';
+
+                    // Match the three custom banners to their GitHub repositories.
+                    if (repoName.includes('zerocost') || repoName.includes('revenueengine') || repoName.includes('zerocostrevenue')) {
+                        bannerImage = 'ZeroCostRevEng.jpg';
+                        bannerAlt = 'ZeroCost Revenue Engine';
+                    } else if (repoName.includes('edumentor')) {
+                        bannerImage = 'EDUMENTOR%20AI.svg';
+                        bannerAlt = 'EduMentor AI';
+                    } else if (repoName.includes('supermarket') || repoName.includes('salesanalytics')) {
+                        bannerImage = 'Supermarket_Sales_Analytics_Banner.svg';
+                        bannerAlt = 'Supermarket Sales Analytics';
+                    }
+
                     projectCard.innerHTML = `
-                        <div class="relative h-48 bg-gradient-to-br ${projectMeta.color} overflow-hidden flex items-center justify-center group cursor-pointer">
-                            <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-                            <div class="text-center text-white p-4 relative z-10">
-                                <div class="text-6xl mb-2 group-hover:scale-110 transition-transform duration-300">${projectMeta.icon}</div>
-                                <p class="text-sm font-semibold line-clamp-2">${repo.name.replace(/-/g, ' ')}</p>
-                            </div>
-                            <div class="absolute top-2 right-2 bg-white dark:bg-slate-800 rounded-full px-3 py-1 text-xs font-semibold text-purple-600 dark:text-purple-300 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="relative h-48 bg-white dark:bg-slate-800 overflow-hidden group">
+                            ${bannerImage
+                                ? `<img src="${bannerImage}" alt="${bannerAlt}" class="w-full h-full object-cover" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                                   <div class="hidden w-full h-full bg-gradient-to-br ${projectMeta.color} flex items-center justify-center text-white p-4">
+                                       <div class="text-5xl mr-3">${projectMeta.icon}</div>
+                                       <p class="text-sm font-semibold">${repo.name.replace(/-/g, ' ')}</p>
+                                   </div>`
+                                : `<div class="w-full h-full bg-gradient-to-br ${projectMeta.color} flex items-center justify-center text-white p-4">
+                                       <div class="text-5xl mr-3">${projectMeta.icon}</div>
+                                       <p class="text-sm font-semibold">${repo.name.replace(/-/g, ' ')}</p>
+                                   </div>`
+                            }
+                            <div class="absolute top-2 right-2 bg-white dark:bg-slate-800 rounded-full px-3 py-1 text-xs font-semibold text-purple-600 dark:text-purple-300 shadow">
                                 ${lang}
                             </div>
                         </div>
